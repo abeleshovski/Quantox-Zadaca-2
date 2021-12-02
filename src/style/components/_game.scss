@@ -1,0 +1,55 @@
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+  color: white;
+  button {
+    background-color: $Orange;
+    border: none;
+    font-weight: 400;
+    width: 90px;
+    height: 40px;
+    border-radius: 15px;
+  }
+}
+
+#gameBoard {
+  border-radius: 10px;
+  border: 0;
+  background-color: $SnowWhite;
+  width: 80vh;
+  height: 80vh;
+  padding: 5vh;
+  td {
+    padding: 5px;
+  }
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+  .notCompleted {
+    color: $DarkBlue;
+    background-color: $DarkBlue;
+    width: 80px;
+    height: 80px;
+    border: 0;
+    border-radius: 50%;
+    &:focus {
+      background-color: $Orange;
+      color: $SnowWhite;
+    }
+  }
+  .completed {
+    color: $White;
+    background-color: $DesaturatedBlue;
+    width: 80px;
+    height: 80px;
+    border: 0;
+    border-radius: 50%;
+  }
+}

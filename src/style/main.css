@@ -1,0 +1,279 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url("https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&display=swap");
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-weight: 400;
+}
+
+body {
+  width: 100vw;
+  min-height: 100vh;
+  font-size: 18px;
+  font-family: "Atkinson Hyperlegible", sans-serif;
+  background-color: #152938;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.5rem;
+  color: white;
+}
+
+#header button {
+  background-color: #fda214;
+  border: none;
+  font-weight: 400;
+  width: 90px;
+  height: 40px;
+  border-radius: 15px;
+}
+
+#gameBoard {
+  border-radius: 10px;
+  border: 0;
+  background-color: #f2f2f2;
+  width: 80vh;
+  height: 80vh;
+  padding: 5vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+}
+
+#gameBoard td {
+  padding: 5px;
+}
+
+#gameBoard .notCompleted {
+  color: #152938;
+  background-color: #152938;
+  width: 80px;
+  height: 80px;
+  border: 0;
+  border-radius: 50%;
+}
+
+#gameBoard .notCompleted:focus {
+  background-color: #fda214;
+  color: #f2f2f2;
+}
+
+#gameBoard .completed {
+  color: #fcfcfc;
+  background-color: #bcced9;
+  width: 80px;
+  height: 80px;
+  border: 0;
+  border-radius: 50%;
+}
+
+#title {
+  font-size: xx-large;
+  color: #fcfcfc;
+  text-align: center;
+}
+
+.startMenuOptions {
+  background-color: #f2f2f2;
+  width: 100vh;
+  padding: 5vh;
+  border-radius: 5px;
+}
+
+.startMenuOptions .selectSettings {
+  color: #7191a5;
+}
+
+.startMenuOptions button {
+  border: 0;
+  color: #fcfcfc;
+  border-radius: 10px;
+  margin-right: 5px;
+  background-color: #bcced9;
+  width: 40%;
+  height: 30px;
+  margin: 5px;
+}
+
+.startMenuOptions button:hover {
+  background-color: #6395b8;
+}
+
+.startMenuOptions .selected {
+  background-color: #152938;
+}
+
+.startMenuOptions h3 {
+  padding: 20px;
+}
+/*# sourceMappingURL=main.css.map */
