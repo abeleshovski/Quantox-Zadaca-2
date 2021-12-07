@@ -1,6 +1,6 @@
-import { StartMenu } from "./components/StartMenu";
+import { StartMenu } from "./components/StartMenu/StartMenu";
 import React, { useState } from "react";
-import { Game } from "./components/Game";
+import { Game } from "./components/Game/Game";
 
 const App = () => {
   const [theme, setTheme] = useState("numbers");
@@ -8,24 +8,37 @@ const App = () => {
   const [numberOfPlayers, setNumberOfPlayers] = useState(1);
   const [gridSize, setGridSize] = useState(4);
 
+  const changeBackgroundToWhite = () => {
+    document.body.style = "background-color: #f5f5f5";
+  };
+
+  const changeBackgroundToDarkBlue = () => {
+    document.body.style = "background-color: #152938";
+  };
   return (
     <div className="App">
       <div className="container">
         {!isStarted && (
-          <StartMenu
-            started={setIsStarted}
-            icons={setTheme}
-            players={setNumberOfPlayers}
-            grid={setGridSize}
-          />
+          <>
+            {changeBackgroundToDarkBlue()}
+            <StartMenu
+              started={setIsStarted}
+              icons={setTheme}
+              players={setNumberOfPlayers}
+              grid={setGridSize}
+            />
+          </>
         )}
         {isStarted && (
-          <Game
-            theme={theme}
-            gridSize={gridSize}
-            players={numberOfPlayers}
-            isStarted={setIsStarted}
-          />
+          <>
+            {changeBackgroundToWhite()}
+            <Game
+              theme={theme}
+              gridSize={gridSize}
+              players={numberOfPlayers}
+              isStarted={setIsStarted}
+            />
+          </>
         )}
       </div>
     </div>

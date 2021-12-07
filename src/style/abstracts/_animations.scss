@@ -1,0 +1,11 @@
+//animation for .activeBtn
+@keyframes activeBtn {
+  0% {
+    background-color: $DarkBlue;
+    color: $DarkBlue;
+  }
+  100% {
+    background-color: $Orange;
+    color: $White;
+  }
+}

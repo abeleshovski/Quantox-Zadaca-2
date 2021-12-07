@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "../style/main.css";
 
 export const StartMenu = (props) => {
   const [theme, setTheme] = useState("numbers");
@@ -71,7 +70,9 @@ export const StartMenu = (props) => {
             </>
           )}
         </div>
-        <button onClick={() => startGame()}>Start Game</button>
+        <button id="startButton" onClick={() => startGame()}>
+          Start Game
+        </button>
       </div>
     </div>
   );

@@ -27,8 +27,18 @@
   }
   .selected {
     background-color: $DarkBlue;
+    &:hover {
+      background-color: $DarkBlue;
+    }
   }
   h3 {
     padding: 20px;
+  }
+}
+
+#startButton {
+  background-color: $Orange;
+  &:hover {
+    background-color: #ffb94b;
   }
 }

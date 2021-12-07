@@ -1,8 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&display=swap");
+@-webkit-keyframes activeBtn {
+  0% {
+    background-color: #152938;
+    color: #152938;
+  }
+  100% {
+    background-color: #fda214;
+    color: #fcfcfc;
+  }
+}
+@keyframes activeBtn {
+  0% {
+    background-color: #152938;
+    color: #152938;
+  }
+  100% {
+    background-color: #fda214;
+    color: #fcfcfc;
+  }
+}
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
 */
-@import url("https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&display=swap");
 html,
 body,
 div,
@@ -143,8 +164,8 @@ table {
 }
 
 body {
-  width: 100vw;
-  min-height: 100vh;
+  width: 100%;
+  height: 90vh;
   font-size: 18px;
   font-family: "Atkinson Hyperlegible", sans-serif;
   background-color: #152938;
@@ -162,6 +183,14 @@ body {
           align-items: center;
 }
 
+#game {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  top: 1rem;
+}
+
 #header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -173,7 +202,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   padding: 0.5rem;
-  color: white;
+  color: black;
 }
 
 #header button {
@@ -215,26 +244,54 @@ body {
 }
 
 #gameBoard .notCompleted {
-  color: #152938;
-  background-color: #152938;
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
   border: 0;
   border-radius: 50%;
 }
 
-#gameBoard .notCompleted:focus {
+#gameBoard .activeBtn {
+  color: #fcfcfc;
   background-color: #fda214;
-  color: #f2f2f2;
+  -webkit-transition: background-color 0.5s, color 0.5s;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+#gameBoard .inactiveBtn {
+  color: #152938;
+  background-color: #152938;
+  -webkit-transition: background-color 1.5s, color 1.5s;
+  transition: background-color 1.5s, color 1.5s;
 }
 
 #gameBoard .completed {
   color: #fcfcfc;
   background-color: #bcced9;
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
   border: 0;
   border-radius: 50%;
+  -webkit-transition: background-color 0.3s, color 0.3s;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+#score {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.5rem;
+  color: black;
+  font-size: 1.5rem;
+}
+
+#wrongAnswer {
+  -webkit-transition: width 0.2s ease-in-out;
+  transition: width 0.2s ease-in-out;
 }
 
 #title {
@@ -273,7 +330,19 @@ body {
   background-color: #152938;
 }
 
+.startMenuOptions .selected:hover {
+  background-color: #152938;
+}
+
 .startMenuOptions h3 {
   padding: 20px;
+}
+
+#startButton {
+  background-color: #fda214;
+}
+
+#startButton:hover {
+  background-color: #ffb94b;
 }
 /*# sourceMappingURL=main.css.map */
