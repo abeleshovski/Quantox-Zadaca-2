@@ -1,11 +1,17 @@
-//animation for .activeBtn
-@keyframes activeBtn {
-  0% {
-    background-color: $DarkBlue;
-    color: $DarkBlue;
+@keyframes fadeIn {
+  from {
+    opacity: 0;
   }
-  100% {
-    background-color: $Orange;
-    color: $White;
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
   }
 }

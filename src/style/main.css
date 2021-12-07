@@ -1,22 +1,36 @@
 @import url("https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&display=swap");
-@-webkit-keyframes activeBtn {
-  0% {
-    background-color: #152938;
-    color: #152938;
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
   }
-  100% {
-    background-color: #fda214;
-    color: #fcfcfc;
+  to {
+    opacity: 1;
   }
 }
-@keyframes activeBtn {
-  0% {
-    background-color: #152938;
-    color: #152938;
+@keyframes fadeIn {
+  from {
+    opacity: 0;
   }
-  100% {
-    background-color: #fda214;
-    color: #fcfcfc;
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
   }
 }
 
@@ -201,6 +215,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 100vh;
   padding: 0.5rem;
   color: black;
 }
@@ -289,9 +304,15 @@ body {
   font-size: 1.5rem;
 }
 
-#wrongAnswer {
-  -webkit-transition: width 0.2s ease-in-out;
-  transition: width 0.2s ease-in-out;
+.falseAnswer {
+  color: black;
+  -webkit-animation: fadeIn 0.3s ease-in;
+          animation: fadeIn 0.3s ease-in;
+}
+
+.trueAnswer {
+  -webkit-animation: fadeOut 1s ease-in;
+          animation: fadeOut 1s ease-in;
 }
 
 #title {

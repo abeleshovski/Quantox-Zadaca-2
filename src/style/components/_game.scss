@@ -10,6 +10,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100vh;
   padding: 0.5rem;
   color: black;
   button {
@@ -80,6 +81,11 @@
   font-size: 1.5rem;
 }
 
-#wrongAnswer {
-  transition: width 0.2s ease-in-out;
+.falseAnswer {
+  color: black;
+  animation: fadeIn 0.3s ease-in;
+}
+
+.trueAnswer {
+  animation: fadeOut 1s ease-in;
 }

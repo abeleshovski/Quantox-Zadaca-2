@@ -1,7 +1,14 @@
 import React, { useState } from "react";
 
 import { NumRender } from "./NumRender";
-import { createGridTemplate } from "./utils/functions";
+
+import { createGridTemplate } from "./utils/InitialStart";
+
+import {
+  numbersDoMatch,
+  numbersDoNotMatch,
+  changeNumber,
+} from "./utils/NumberManipulation";
 
 export const Game = (props) => {
   const [score, setScore] = useState(0);
@@ -11,6 +18,8 @@ export const Game = (props) => {
 
   const [prevNumber, setPrevNumber] = useState(0);
   const [prevId, setPrevId] = useState(0);
+  const [currNumber, setCurrNumber] = useState(0);
+  const [currId, setCurrId] = useState(0);
   const [answer, setAnswer] = useState(true);
 
   const checkNumber = (number, id) => {
@@ -18,63 +27,61 @@ export const Game = (props) => {
     if (prevNumber === 0) {
       setPrevNumber(number);
       setPrevId(id);
-    } else if (prevNumber === number) {
-      setPrevNumber(0);
-      setPrevId(0);
-      if (score === 0) {
-        setScore(12);
-      } else {
-        setScore(score * multiplier);
-      }
-      setMultiplier(multiplier + 1);
+    } else if (currNumber === 0) {
+      setCurrNumber(number);
+      setCurrId(id);
+      checkIfNumbersMatch(number);
+    }
+  };
 
+  const [answerClass, setAnswerClass] = useState("true");
+
+  const checkIfNumbersMatch = (number) => {
+    if (prevNumber === number) {
+      numbersDoMatch(
+        setPrevNumber,
+        setCurrNumber,
+        score,
+        multiplier,
+        setAnswer,
+        setPrevId,
+        setCurrId,
+        setScore,
+        setMultiplier
+      );
       changeNum(number);
     } else {
-      setPrevNumber(0);
-      setPrevId(0);
-      setMultiplier(1);
-      setAnswer(false);
+      numbersDoNotMatch(
+        setPrevNumber,
+        setCurrNumber,
+        setAnswer,
+        setPrevId,
+        setCurrId,
+        setMultiplier,
+        setAnswerClass
+      );
     }
   };
 
   const changeNum = (number) => {
-    let newGrid = [...numbers];
-    for (let i = 0; i < props.gridSize; i++) {
-      for (let j = 0; j < props.gridSize; j++) {
-        if (newGrid[i][j].value === number) {
-          console.log(newGrid[i][j].value);
-          newGrid[i][j].value = `${number}`;
-        }
-      }
-    }
-    setNumbers(newGrid);
-    let flag = false;
-    for (let i = 0; i < props.gridSize; i++) {
-      for (let j = 0; j < props.gridSize; j++) {
-        if (typeof newGrid[i][j].value != "string") {
-          flag = false;
-        } else {
-          flag = true;
-        }
-        if (!flag) {
-          break;
-        }
-      }
-      if (!flag) {
-        break;
-      }
-    }
-    if (flag) {
-      alert(`You won! Your score is ${score}`);
-      props.isStarted(false);
-    }
+    changeNumber(
+      numbers,
+      number,
+      props.gridSize,
+      setNumbers,
+      props.isStarted,
+      score
+    );
   };
 
   return (
     <div id="game">
       <div id="header">
         <h1>memory</h1>
-        {!answer && <h1 id="wrongAnswer">wrong answer</h1>}
+        {!answer && (
+          <h1 className={`wrongAnswer ${answerClass}Answer`}>Wrong answer!</h1>
+        )}
+
         <button id="newGame" onClick={() => props.isStarted(false)}>
           New Game
         </button>
@@ -95,6 +102,8 @@ export const Game = (props) => {
                         checkNumber={checkNumber}
                         id={number.id}
                         prevId={prevId}
+                        currNumber={currNumber}
+                        currId={currId}
                       />
                     )}
                   </td>
