@@ -272,11 +272,26 @@ body {
   transition: background-color 0.5s, color 0.5s;
 }
 
+#gameBoard .activeBtn img {
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
+  opacity: 1;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+}
+
 #gameBoard .inactiveBtn {
   color: #152938;
   background-color: #152938;
-  -webkit-transition: background-color 1.5s, color 1.5s;
-  transition: background-color 1.5s, color 1.5s;
+  -webkit-transition: background-color 1.5s, color 1.5s, -webkit-filter 1.5s;
+  transition: background-color 1.5s, color 1.5s, -webkit-filter 1.5s;
+  transition: background-color 1.5s, color 1.5s, filter 1.5s;
+  transition: background-color 1.5s, color 1.5s, filter 1.5s, -webkit-filter 1.5s;
+}
+
+#gameBoard .inactiveBtn img {
+  -webkit-filter: opacity(0);
+          filter: opacity(0);
 }
 
 #gameBoard .completed {
@@ -288,6 +303,11 @@ body {
   border-radius: 50%;
   -webkit-transition: background-color 0.3s, color 0.3s;
   transition: background-color 0.3s, color 0.3s;
+}
+
+#gameBoard .completed img {
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
 }
 
 #score {
@@ -315,6 +335,12 @@ body {
           animation: fadeOut 1s ease-in;
 }
 
+img {
+  width: 59px;
+  height: 59px;
+  border-radius: 50%;
+}
+
 #title {
   font-size: xx-large;
   color: #fcfcfc;
@@ -339,7 +365,7 @@ body {
   margin-right: 5px;
   background-color: #bcced9;
   width: 40%;
-  height: 30px;
+  height: 7vh;
   margin: 5px;
 }
 

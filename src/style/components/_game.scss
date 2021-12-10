@@ -53,12 +53,21 @@
     color: $White;
     background-color: $Orange;
     transition: background-color 0.5s, color 0.5s;
+    img {
+      filter: invert(100%);
+      opacity: 1;
+      transition: opacity 0.5s;
+    }
   }
 
   .inactiveBtn {
     color: $DarkBlue;
     background-color: $DarkBlue;
-    transition: background-color 1.5s, color 1.5s;
+
+    img {
+      filter: opacity(0);
+    }
+    transition: background-color 1.5s, color 1.5s, filter 1.5s;
   }
 
   .completed {
@@ -69,6 +78,9 @@
     border: 0;
     border-radius: 50%;
     transition: background-color 0.3s, color 0.3s;
+    img {
+      filter: invert(100%);
+    }
   }
 }
 
@@ -88,4 +100,10 @@
 
 .trueAnswer {
   animation: fadeOut 1s ease-in;
+}
+
+img {
+  width: 59px;
+  height: 59px;
+  border-radius: 50%;
 }

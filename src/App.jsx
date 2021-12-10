@@ -1,6 +1,7 @@
 import { StartMenu } from "./components/StartMenu/StartMenu";
 import React, { useState } from "react";
-import { Game } from "./components/Game/Game";
+import { NumberGame } from "./components/Game/NumberGame";
+import { IconGame } from "./components/Game/IconGame";
 
 const App = () => {
   const [theme, setTheme] = useState("numbers");
@@ -29,14 +30,25 @@ const App = () => {
             />
           </>
         )}
-        {isStarted && (
+        {isStarted && theme === "numbers" && (
           <>
             {changeBackgroundToWhite()}
-            <Game
-              theme={theme}
+            <NumberGame
               gridSize={gridSize}
               players={numberOfPlayers}
               isStarted={setIsStarted}
+              theme={theme}
+            />
+          </>
+        )}
+        {isStarted && theme === "icons" && (
+          <>
+            {changeBackgroundToWhite()}
+            <IconGame
+              gridSize={gridSize}
+              players={numberOfPlayers}
+              isStarted={setIsStarted}
+              theme={theme}
             />
           </>
         )}
