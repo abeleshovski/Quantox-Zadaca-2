@@ -23,7 +23,7 @@ export const StartMenu = (props) => {
             Select theme
           </h3>
           {theme === "numbers" ? (
-            <>
+            <div className="select">
               <button
                 className="selected"
                 onClick={() => {
@@ -35,9 +35,9 @@ export const StartMenu = (props) => {
               <button className="notSelected" onClick={() => setTheme("icons")}>
                 Icons
               </button>
-            </>
+            </div>
           ) : (
-            <>
+            <div className="select">
               <button
                 className="notSelected"
                 onClick={() => {
@@ -49,25 +49,25 @@ export const StartMenu = (props) => {
               <button className={`selected`} onClick={() => setTheme("icons")}>
                 Icons
               </button>
-            </>
+            </div>
           )}
         </div>
         <div className="gridSize">
           <h3 className="selectSettings">Grid size</h3>
           {gridSize === 4 ? (
-            <>
+            <div className="select">
               <button className="selected" onClick={() => setGridSize(4)}>
                 4x4
               </button>
               <button onClick={() => setGridSize(6)}>6x6</button>
-            </>
+            </div>
           ) : (
-            <>
+            <div className="select">
               <button onClick={() => setGridSize(4)}>4x4</button>
               <button className="selected" onClick={() => setGridSize(6)}>
                 6x6
               </button>
-            </>
+            </div>
           )}
         </div>
         <button id="startButton" onClick={() => startGame()}>

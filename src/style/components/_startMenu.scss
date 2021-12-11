@@ -4,6 +4,13 @@
   text-align: center;
 }
 
+.startMenu {
+  align-self: center;
+  position: relative;
+  top: 20vh;
+  width: 100%;
+}
+
 .startMenuOptions {
   background-color: $SnowWhite;
   width: 100vh;
@@ -18,7 +25,7 @@
     border-radius: 10px;
     margin-right: 5px;
     background-color: $DesaturatedBlue;
-    width: 40%;
+    width: 50%;
     height: 7vh;
     margin: 5px;
     &:hover {
@@ -34,10 +41,15 @@
   h3 {
     padding: 20px;
   }
+  .select {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 #startButton {
   background-color: $Orange;
+  width: 100%;
   &:hover {
     background-color: #ffb94b;
   }

@@ -18,41 +18,39 @@ const App = () => {
   };
   return (
     <div className="App">
-      <div className="container">
-        {!isStarted && (
-          <>
-            {changeBackgroundToDarkBlue()}
-            <StartMenu
-              started={setIsStarted}
-              icons={setTheme}
-              players={setNumberOfPlayers}
-              grid={setGridSize}
-            />
-          </>
-        )}
-        {isStarted && theme === "numbers" && (
-          <>
-            {changeBackgroundToWhite()}
-            <NumberGame
-              gridSize={gridSize}
-              players={numberOfPlayers}
-              isStarted={setIsStarted}
-              theme={theme}
-            />
-          </>
-        )}
-        {isStarted && theme === "icons" && (
-          <>
-            {changeBackgroundToWhite()}
-            <IconGame
-              gridSize={gridSize}
-              players={numberOfPlayers}
-              isStarted={setIsStarted}
-              theme={theme}
-            />
-          </>
-        )}
-      </div>
+      {!isStarted && (
+        <>
+          {changeBackgroundToDarkBlue()}
+          <StartMenu
+            started={setIsStarted}
+            icons={setTheme}
+            players={setNumberOfPlayers}
+            grid={setGridSize}
+          />
+        </>
+      )}
+      {isStarted && theme === "numbers" && (
+        <>
+          {changeBackgroundToWhite()}
+          <NumberGame
+            gridSize={gridSize}
+            players={numberOfPlayers}
+            isStarted={setIsStarted}
+            theme={theme}
+          />
+        </>
+      )}
+      {isStarted && theme === "icons" && (
+        <>
+          {changeBackgroundToWhite()}
+          <IconGame
+            gridSize={gridSize}
+            players={numberOfPlayers}
+            isStarted={setIsStarted}
+            theme={theme}
+          />
+        </>
+      )}
     </div>
   );
 };

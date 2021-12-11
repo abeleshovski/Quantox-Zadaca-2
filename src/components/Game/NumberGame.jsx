@@ -69,7 +69,7 @@ export const NumberGame = (props) => {
   return (
     <div id="game">
       <div id="header">
-        <h1>memory</h1>
+        <h1 id="memoryHeader">memory</h1>
         {!answer && (
           <h1 className={`wrongAnswer ${answerClass}Answer`}>Wrong answer!</h1>
         )}
