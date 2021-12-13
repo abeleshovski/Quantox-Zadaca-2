@@ -10,10 +10,10 @@ import {
   itemsDoMatch,
   itemsDoNotMatch,
 } from "../../utils/ItemManipulation";
+import { Timer } from "./Timer";
 
 export const NumberGame = (props) => {
   const [score, setScore] = useState(0);
-  const [multiplier, setMultiplier] = useState(1);
   const [gridSize] = useState(props.gridSize);
   const [numbers, setNumbers] = useState(
     chunk(shuffleNumbers(gridSize, props.theme), gridSize)
@@ -42,12 +42,6 @@ export const NumberGame = (props) => {
   const checkIfNumbersMatch = (number) => {
     if (prevNumber === number) {
       itemsDoMatch(setPrevNumber, setCurrNumber, setPrevId, setCurrId);
-      if (score === 0) {
-        setScore(12);
-      } else {
-        setScore(score * multiplier);
-      }
-      setMultiplier(multiplier + 1);
       changeNum(number);
     } else {
       itemsDoNotMatch(
@@ -58,7 +52,7 @@ export const NumberGame = (props) => {
         setCurrId,
         setAnswerClass
       );
-      setMultiplier(2);
+      setScore(score + 1);
     }
   };
 
@@ -86,7 +80,9 @@ export const NumberGame = (props) => {
                 return (
                   <td key={number.id}>
                     {number.matched ? (
-                      <button className="completed">{number.value}</button>
+                      <button className={`completed grid${gridSize}`}>
+                        {number.value}
+                      </button>
                     ) : (
                       <NumRender
                         prevNumber={prevNumber}
@@ -96,6 +92,7 @@ export const NumberGame = (props) => {
                         prevId={prevId}
                         currNumber={currNumber}
                         currId={currId}
+                        gridSize={gridSize}
                       />
                     )}
                   </td>
@@ -105,7 +102,12 @@ export const NumberGame = (props) => {
           ))}
         </tbody>
       </table>
-      <div id="score">Score: {score}</div>
+      <div id="score">
+        <Timer />
+        <span className="stats">
+          Moves: <span className="statistic"> {score}</span>
+        </span>
+      </div>
     </div>
   );
 };

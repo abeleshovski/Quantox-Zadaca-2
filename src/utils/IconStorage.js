@@ -3,9 +3,9 @@ import youtube from "../style/icons/youtube.svg";
 import facebook from "../style/icons/facebook.svg";
 import instagram from "../style/icons/instagram.svg";
 import twitter from "../style/icons/twitter.svg";
-import linkedin from "../style/icons/linkedin.svg";
-import imdb from "../style/icons/imdb.svg";
-import js from "../style/icons/js.svg";
+import jedi from "../style/icons/jedi-order.svg";
+import apple from "../style/icons/apple.svg";
+import battleNet from "../style/icons/battle-net.svg";
 import google from "../style/icons/google.svg";
 import github from "../style/icons/github.svg";
 import firefox from "../style/icons/firefox.svg";
@@ -23,9 +23,9 @@ export const icons = [
   facebook,
   instagram,
   twitter,
-  linkedin,
-  imdb,
-  js,
+  jedi,
+  apple,
+  battleNet,
   google,
   github,
   firefox,
@@ -45,8 +45,8 @@ export const iconNames = [
   "instagram",
   "twitter",
   "linkedin",
-  "imdb",
-  "js",
+  "apple",
+  "battleNet",
   "google",
   "github",
   "firefox",

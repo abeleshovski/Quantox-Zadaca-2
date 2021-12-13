@@ -5,10 +5,12 @@ export const NumRender = (props) => {
     <>
       {(props.number === props.prevNumber && props.id === props.prevId) ||
       (props.number === props.currNumber && props.id === props.currId) ? (
-        <button className={`notCompleted activeBtn`}>{props.number}</button>
+        <button className={`notCompleted grid${props.gridSize} activeBtn`}>
+          {props.number}
+        </button>
       ) : (
         <button
-          className={`notCompleted inactiveBtn `}
+          className={`notCompleted grid${props.gridSize} inactiveBtn `}
           onClick={() => props.checkNumber(props.number, props.id)}
         >
           {props.number}

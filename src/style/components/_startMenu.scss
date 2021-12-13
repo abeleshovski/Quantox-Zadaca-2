@@ -43,13 +43,13 @@
   }
   .select {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
   }
 }
 
 #startButton {
   background-color: $Orange;
-  width: 100%;
+  width: 98%;
   &:hover {
     background-color: #ffb94b;
   }

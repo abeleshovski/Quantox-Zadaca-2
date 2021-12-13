@@ -15,6 +15,7 @@
     "react-router-dom": "^6.0.2",
     "react-scripts": "4.0.3",
     "react-svg": "^14.1.4",
+    "react-timer-hook": "^3.0.5",
     "uuid": "^8.3.2",
     "web-vitals": "^1.1.2"
   },

@@ -5,12 +5,12 @@ export const IconRender = (props) => {
     <>
       {(props.icon === props.prevIcon && props.id) === props.prevId ||
       (props.icon === props.currIcon && props.id === props.currId) ? (
-        <button className={`notCompleted activeBtn`}>
+        <button className={`notCompleted grid${props.gridSize} activeBtn`}>
           <img src={props.icon} alt={props.icon} />
         </button>
       ) : (
         <button
-          className={`notCompleted inactiveBtn `}
+          className={`notCompleted grid${props.gridSize} inactiveBtn `}
           onClick={() => props.checkIcon(props.icon, props.id)}
         >
           <img src={props.icon} alt={props.icon} />

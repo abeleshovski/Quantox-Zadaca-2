@@ -7,6 +7,7 @@ import {
 } from "../../utils/ItemManipulation";
 import { shuffleNumbers } from "../../utils/InitialStart";
 import { IconRender } from "./IconRender";
+import { Timer } from "./Timer";
 
 export const IconGame = (props) => {
   const [icons, setIcons] = useState(
@@ -30,19 +31,12 @@ export const IconGame = (props) => {
   };
 
   const [score, setScore] = useState(0);
-  const [multiplier, setMultiplier] = useState(2);
   const [answer, setAnswer] = useState(true);
   const [answerClass, setAnswerClass] = useState("true");
 
   const checkIfIconsMatch = (icon) => {
     if (prevIcon === icon) {
       itemsDoMatch(setPrevIcon, setCurrIcon, setPrevId, setCurrId);
-      if (score === 0) {
-        setScore(12);
-      } else {
-        setScore(score * multiplier);
-      }
-      setMultiplier(multiplier + 1);
       changeItem(icons, icon, setIcons, props.isStarted, score);
     } else {
       itemsDoNotMatch(
@@ -53,8 +47,8 @@ export const IconGame = (props) => {
         setCurrId,
         setAnswerClass
       );
-      setMultiplier(2);
     }
+    setScore(score + 1);
   };
 
   return (
@@ -77,7 +71,7 @@ export const IconGame = (props) => {
                   <td key={icon.id}>
                     {icon.matched ? (
                       <img
-                        className="completed"
+                        className={`complete grid${props.gridSize}`}
                         src={icon.value}
                         alt={icon.value}
                       />
@@ -89,6 +83,7 @@ export const IconGame = (props) => {
                         currId={currId}
                         icon={icon.value}
                         id={icon.id}
+                        gridSize={props.gridSize}
                         checkIcon={checkIcon}
                       />
                     )}
@@ -99,7 +94,12 @@ export const IconGame = (props) => {
           ))}
         </tbody>
       </table>
-      <div id="score">Score: {score}</div>
+      <div id="score">
+        <Timer />
+        <span className="stats">
+          Moves: <span className="statistic"> {score}</span>
+        </span>
+      </div>
     </div>
   );
 };

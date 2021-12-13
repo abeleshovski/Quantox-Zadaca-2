@@ -268,8 +268,6 @@ button {
 }
 
 #gameBoard .notCompleted {
-  width: 80px;
-  height: 80px;
   border: 0;
   border-radius: 50%;
 }
@@ -306,8 +304,6 @@ button {
 #gameBoard .completed {
   color: #fcfcfc;
   background-color: #bcced9;
-  width: 80px;
-  height: 80px;
   border: 0;
   border-radius: 50%;
   -webkit-transition: background-color 0.3s, color 0.3s;
@@ -319,12 +315,34 @@ button {
           filter: invert(100%);
 }
 
+#gameBoard .grid4 {
+  width: 80px;
+  height: 80px;
+}
+
+#gameBoard .grid4 img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+#gameBoard .grid6 {
+  width: 55px;
+  height: 55px;
+}
+
+#gameBoard .grid6 img {
+  width: 55px;
+  height: 55px;
+}
+
 #score {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -344,10 +362,20 @@ button {
           animation: fadeOut 1s ease-in;
 }
 
-img {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
+.stats {
+  background-color: #bcced9;
+  color: #152938;
+  border-radius: 15px;
+  padding: 0.5rem;
+}
+
+.stats {
+  margin: 5px;
+  font-weight: 600;
+}
+
+.stats .statistic {
+  font-weight: 400;
 }
 
 #title {
@@ -407,17 +435,33 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 #startButton {
   background-color: #fda214;
-  width: 100%;
+  width: 98%;
 }
 
 #startButton:hover {
   background-color: #ffb94b;
+}
+
+@media screen and (max-width: 1025px) {
+  .startMenuOptions {
+    width: 50vh;
+  }
+  #game {
+    width: 50vh;
+    position: relative;
+    top: 10vh;
+  }
+  #game #header {
+    width: 100%;
+  }
+  #startButton {
+    width: 97%;
+  }
 }
 /*# sourceMappingURL=main.css.map */
