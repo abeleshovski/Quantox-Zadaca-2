@@ -1,28 +1,28 @@
 import { v4 as uuidv4 } from "uuid";
-import { icons, iconNames } from "./IconStorage";
+import { icons } from "./IconStorage";
 
-const createNumbers = (numbers, gridSize, theme) => {
+const createItems = (items, gridSize, theme) => {
   if (theme === "numbers") {
     for (let i = 0; i < (gridSize * gridSize) / 2; i++) {
-      let randomNumber = parseInt(Math.random() * 100 + 1);
-      //if the number exists in numbers array, then create a new random number
-      if (numbers.includes(randomNumber)) {
-        randomNumber = parseInt(Math.random() * 100 + 1);
+      let randomItem = parseInt(Math.random() * 100 + 1);
+
+      if (items.includes(randomItem)) {
+        randomItem = parseInt(Math.random() * 100 + 1);
       }
-      numbers.push(randomNumber);
+      items.push(randomItem);
     }
   } else if (theme === "icons") {
     for (let i = 0; i < (gridSize * gridSize) / 2; i++) {
-      numbers.push(icons[i]);
+      items.push(icons[i]);
     }
   }
 };
-export const shuffleNumbers = (gridSize, theme) => {
-  let numbers = [];
-  createNumbers(numbers, gridSize, theme);
+export const shuffleItems = (gridSize, theme) => {
+  let items = [];
+  createItems(items, gridSize, theme);
 
-  let shuffledNumbers = [...numbers, ...numbers];
-  shuffledNumbers = shuffledNumbers.map((number, i) =>
+  let shuffledItems = [...items, ...items];
+  shuffledItems = shuffledItems.map((number, i) =>
     //give number a uuid
     ({
       id: uuidv4(),
@@ -30,5 +30,5 @@ export const shuffleNumbers = (gridSize, theme) => {
       matched: false,
     })
   );
-  return shuffledNumbers.sort(() => Math.random() - 0.5);
+  return shuffledItems.sort(() => Math.random() - 0.5);
 };

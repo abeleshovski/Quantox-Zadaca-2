@@ -6,6 +6,11 @@
     width: 50vh;
     #header {
       width: 100%;
+      button {
+        position: relative;
+        display: block;
+        right: 30px;
+      }
     }
     position: relative;
     top: 10vh;

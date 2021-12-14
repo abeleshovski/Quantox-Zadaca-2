@@ -1,36 +1,11 @@
-export const itemsDoMatch = (
-  setPrevItem,
-  setCurrItem,
-  setPrevId,
-  setCurrId
-) => {
-  setPrevItem(null);
-  setPrevId(null);
-  setCurrItem(null);
-  setCurrId(null);
+export const itemsDoMatch = (resetStates) => {
+  resetStates();
 };
 
-export const itemsDoNotMatch = (
-  setPrevItem,
-  setCurrItem,
-  setAnswer,
-  setPrevId,
-  setCurrId,
-  setAnswerClass
-) => {
-  setAnswer(false);
-  setAnswerClass(false);
+export const itemsDoNotMatch = (resetStates) => {
   setTimeout(() => {
-    setPrevItem(null);
-    setPrevId(null);
-    setCurrItem(null);
-    setCurrId(null);
-    setAnswerClass(true);
+    resetStates();
   }, 1000);
-  clearTimeout();
-  setTimeout(() => {
-    setAnswer(true);
-  }, 2000);
   clearTimeout();
 };
 

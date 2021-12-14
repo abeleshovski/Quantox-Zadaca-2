@@ -14,15 +14,26 @@
   width: 200vh;
   padding: 0.5rem;
   color: black;
+  h1 {
+    position: relative;
+    left: 50px;
+  }
   button {
+    border: none;
+    font-size: 20px;
+    font-weight: 600;
+    width: 130px;
+    height: 40px;
+    border-radius: 20px;
+    margin: 5px;
+  }
+  #newGame {
+    background-color: $DesaturatedBlue;
+    color: $DarkBlue;
+  }
+  #restartGame {
     background-color: $Orange;
     color: $SnowWhite;
-    border: none;
-    font-size: 15px;
-    font-weight: 400;
-    width: 90px;
-    height: 40px;
-    border-radius: 15px;
   }
 }
 
@@ -76,14 +87,15 @@
   }
 
   .completed {
-    color: $White;
+    color: $DarkBlue;
     background-color: $DesaturatedBlue;
-
     border: 0;
     border-radius: 50%;
-    transition: background-color 0.3s, color 0.3s;
+    //transition color to $DarkBlue and background-color to $DesaturatedBlue
     img {
       filter: invert(100%);
+      opacity: 1;
+      transition: opacity 0.5s ease-in;
     }
   }
 
@@ -136,6 +148,9 @@
 .stats {
   margin: 5px;
   font-weight: 600;
+  width: 180px;
+  display: flex;
+  justify-content: space-around;
   .statistic {
     font-weight: 400;
   }

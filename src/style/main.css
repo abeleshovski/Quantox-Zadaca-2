@@ -169,6 +169,15 @@ table {
   border-spacing: 0;
 }
 
+@font-face {
+  font-family: "Atkinson Hyperlegible";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/atkinsonhyperlegible/v7/9Bt23C1KxNDXMspQ1lPyU89-1h6ONRlW45G04pIo.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -179,7 +188,6 @@ table {
 
 body {
   font-size: 18px;
-  font-family: "Atkinson Hyperlegible", sans-serif;
   background-color: #152938;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -193,6 +201,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  font-family: "Atkinson Hyperlegible";
 }
 
 button {
@@ -223,15 +232,29 @@ button {
   color: black;
 }
 
+#header h1 {
+  position: relative;
+  left: 50px;
+}
+
 #header button {
+  border: none;
+  font-size: 20px;
+  font-weight: 600;
+  width: 130px;
+  height: 40px;
+  border-radius: 20px;
+  margin: 5px;
+}
+
+#header #newGame {
+  background-color: #bcced9;
+  color: #152938;
+}
+
+#header #restartGame {
   background-color: #fda214;
   color: #f2f2f2;
-  border: none;
-  font-size: 15px;
-  font-weight: 400;
-  width: 90px;
-  height: 40px;
-  border-radius: 15px;
 }
 
 #memoryHeader {
@@ -302,17 +325,18 @@ button {
 }
 
 #gameBoard .completed {
-  color: #fcfcfc;
+  color: #152938;
   background-color: #bcced9;
   border: 0;
   border-radius: 50%;
-  -webkit-transition: background-color 0.3s, color 0.3s;
-  transition: background-color 0.3s, color 0.3s;
 }
 
 #gameBoard .completed img {
   -webkit-filter: invert(100%);
           filter: invert(100%);
+  opacity: 1;
+  -webkit-transition: opacity 0.5s ease-in;
+  transition: opacity 0.5s ease-in;
 }
 
 #gameBoard .grid4 {
@@ -372,6 +396,12 @@ button {
 .stats {
   margin: 5px;
   font-weight: 600;
+  width: 180px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 .stats .statistic {
@@ -395,7 +425,7 @@ button {
 
 .startMenuOptions {
   background-color: #f2f2f2;
-  width: 100vh;
+  width: 90vh;
   padding: 5vh;
   border-radius: 5px;
 }
@@ -407,7 +437,7 @@ button {
 .startMenuOptions button {
   border: 0;
   color: #fcfcfc;
-  border-radius: 10px;
+  border-radius: 40px;
   margin-right: 5px;
   background-color: #bcced9;
   width: 50%;
@@ -459,6 +489,11 @@ button {
   }
   #game #header {
     width: 100%;
+  }
+  #game #header button {
+    position: relative;
+    display: block;
+    right: 30px;
   }
   #startButton {
     width: 97%;
