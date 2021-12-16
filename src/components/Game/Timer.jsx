@@ -8,7 +8,7 @@ export const Timer = () => {
       <h3>
         Time:{" "}
         <span className="statistic">
-          {minutes}:{seconds}s
+          {minutes}m:{seconds}s
         </span>
       </h3>
     </div>

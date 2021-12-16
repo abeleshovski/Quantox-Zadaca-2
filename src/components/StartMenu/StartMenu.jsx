@@ -2,16 +2,15 @@ import React, { useState } from "react";
 
 export const StartMenu = (props) => {
   const [theme, setTheme] = useState("numbers");
-  const [numberOfPlayers, setNumberOfPlayers] = useState(1);
   const [gridSize, setGridSize] = useState(4);
 
   const startGame = () => {
     props.started(true);
     props.icons(theme);
-    props.players(numberOfPlayers);
+
     props.grid(gridSize);
     alert("Have Fun! :D");
-    console.log(theme, numberOfPlayers, gridSize);
+    console.log(theme, gridSize);
   };
 
   return (
@@ -77,5 +76,3 @@ export const StartMenu = (props) => {
     </div>
   );
 };
-
-export let isGameStarted = false;

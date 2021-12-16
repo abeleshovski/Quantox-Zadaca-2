@@ -14,11 +14,12 @@ import { Timer } from "./Timer";
 import { RenderComplete } from "./RenderComplete";
 
 export const Game = (props) => {
-  const [score, setScore] = useState(0);
+  const [moves, setMoves] = useState(0);
   const [gridSize] = useState(props.gridSize);
   const [items, setItems] = useState(
     chunk(shuffleItems(gridSize, props.theme), gridSize)
   );
+  const [time, setTime] = useState({ minutes: null, seconds: null });
 
   const [prevItem, setPrevItem] = useState(null);
   const [prevId, setPrevId] = useState(null);
@@ -39,10 +40,10 @@ export const Game = (props) => {
   const checkIfItemsMatch = (item) => {
     if (prevItem === item) {
       itemsDoMatch(resetStates);
-      changeItem(items, item, setItems, props.isStarted, score);
+      changeItem(items, item, setItems, props.isStarted, moves, time);
     } else {
       itemsDoNotMatch(resetStates);
-      setScore(score + 1);
+      setMoves(moves + 1);
     }
   };
 
@@ -56,6 +57,7 @@ export const Game = (props) => {
   const resetGame = () => {
     setItems(chunk(shuffleItems(gridSize, props.theme), gridSize));
     resetStates();
+    alert("Game Reset");
   };
 
   return (
@@ -100,9 +102,9 @@ export const Game = (props) => {
         </tbody>
       </table>
       <div id="score">
-        <Timer />
+        <Timer setTime={setTime} />
         <span className="stats">
-          Moves: <span className="statistic"> {score}</span>
+          Moves: <span className="statistic"> {moves}</span>
         </span>
       </div>
     </div>

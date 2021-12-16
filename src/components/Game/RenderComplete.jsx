@@ -1,7 +1,6 @@
 import React from "react";
 
 export const RenderComplete = (props) => {
-  console.log(props.item);
   return (
     <>
       {typeof props.item.value == "number" ? (
@@ -10,7 +9,8 @@ export const RenderComplete = (props) => {
         </button>
       ) : (
         <img
-          className={`complete grid${props.gridSize}`}
+          className={`completed grid${props.gridSize}`}
+          //transition background color
           src={props.item.value}
           alt={props.item.value}
         />

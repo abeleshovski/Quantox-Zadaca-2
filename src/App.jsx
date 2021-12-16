@@ -40,17 +40,6 @@ const App = () => {
           />
         </>
       )}
-      {/* {isStarted && theme === "icons" && (
-        <>
-          {changeBackgroundToWhite()}
-          <IconGame
-            gridSize={gridSize}
-            players={numberOfPlayers}
-            isStarted={setIsStarted}
-            theme={theme}
-          />
-        </>
-      )} */}
     </div>
   );
 };

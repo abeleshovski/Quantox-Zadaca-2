@@ -14,8 +14,8 @@
 .startMenuOptions {
   background-color: $SnowWhite;
   width: 90vh;
-  padding: 5vh;
-  border-radius: 5px;
+  padding: 2vh;
+  border-radius: 10px;
   .selectSettings {
     color: $SemiLighBlue;
   }
@@ -25,15 +25,18 @@
     border-radius: 40px;
     margin-right: 5px;
     background-color: $DesaturatedBlue;
+    transition: background-color 0.2s;
     width: 50%;
     height: 7vh;
     margin: 5px;
     &:hover {
       background-color: $LightBlue;
+      transition: background-color 0.2s;
     }
   }
   .selected {
     background-color: $DarkBlue;
+    transition: background-color 0.2s;
     &:hover {
       background-color: $DarkBlue;
     }

@@ -234,7 +234,7 @@ button {
 
 #header h1 {
   position: relative;
-  left: 50px;
+  left: 20px;
 }
 
 #header button {
@@ -298,25 +298,25 @@ button {
 #gameBoard .activeBtn {
   color: #fcfcfc;
   background-color: #fda214;
-  -webkit-transition: background-color 0.5s, color 0.5s;
-  transition: background-color 0.5s, color 0.5s;
+  -webkit-transition: background-color 0.2s, color 0.2s;
+  transition: background-color 0.2s, color 0.2s;
 }
 
 #gameBoard .activeBtn img {
   -webkit-filter: invert(100%);
           filter: invert(100%);
   opacity: 1;
-  -webkit-transition: opacity 0.5s;
-  transition: opacity 0.5s;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
 }
 
 #gameBoard .inactiveBtn {
   color: #152938;
   background-color: #152938;
-  -webkit-transition: background-color 1.5s, color 1.5s, -webkit-filter 1.5s;
-  transition: background-color 1.5s, color 1.5s, -webkit-filter 1.5s;
-  transition: background-color 1.5s, color 1.5s, filter 1.5s;
-  transition: background-color 1.5s, color 1.5s, filter 1.5s, -webkit-filter 1.5s;
+  -webkit-transition: background-color 0.5s, color 0.5s, -webkit-filter 0.5s;
+  transition: background-color 0.5s, color 0.5s, -webkit-filter 0.5s;
+  transition: background-color 0.5s, color 0.5s, filter 0.5s;
+  transition: background-color 0.5s, color 0.5s, filter 0.5s, -webkit-filter 0.5s;
 }
 
 #gameBoard .inactiveBtn img {
@@ -329,14 +329,16 @@ button {
   background-color: #bcced9;
   border: 0;
   border-radius: 50%;
+  -webkit-transition: background-color 0.5s, color 0.5s;
+  transition: background-color 0.5s, color 0.5s;
 }
 
 #gameBoard .completed img {
   -webkit-filter: invert(100%);
           filter: invert(100%);
   opacity: 1;
-  -webkit-transition: opacity 0.5s ease-in;
-  transition: opacity 0.5s ease-in;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
 }
 
 #gameBoard .grid4 {
@@ -426,8 +428,8 @@ button {
 .startMenuOptions {
   background-color: #f2f2f2;
   width: 90vh;
-  padding: 5vh;
-  border-radius: 5px;
+  padding: 2vh;
+  border-radius: 10px;
 }
 
 .startMenuOptions .selectSettings {
@@ -440,6 +442,8 @@ button {
   border-radius: 40px;
   margin-right: 5px;
   background-color: #bcced9;
+  -webkit-transition: background-color 0.2s;
+  transition: background-color 0.2s;
   width: 50%;
   height: 7vh;
   margin: 5px;
@@ -447,10 +451,14 @@ button {
 
 .startMenuOptions button:hover {
   background-color: #6395b8;
+  -webkit-transition: background-color 0.2s;
+  transition: background-color 0.2s;
 }
 
 .startMenuOptions .selected {
   background-color: #152938;
+  -webkit-transition: background-color 0.2s;
+  transition: background-color 0.2s;
 }
 
 .startMenuOptions .selected:hover {
@@ -480,20 +488,23 @@ button {
 
 @media screen and (max-width: 1025px) {
   .startMenuOptions {
-    width: 50vh;
+    width: 45vh;
   }
   #game {
-    width: 50vh;
+    width: 55vh;
     position: relative;
     top: 10vh;
   }
   #game #header {
     width: 100%;
   }
-  #game #header button {
-    position: relative;
-    display: block;
-    right: 30px;
+  #game #header #newGame {
+    width: 100px;
+    font-size: 15px;
+  }
+  #game #header #restartGame {
+    width: 100px;
+    font-size: 15px;
   }
   #startButton {
     width: 97%;

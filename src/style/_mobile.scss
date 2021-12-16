@@ -1,17 +1,21 @@
 @media screen and (max-width: 1025px) {
   .startMenuOptions {
-    width: 50vh;
+    width: 45vh;
   }
   #game {
-    width: 50vh;
+    width: 55vh;
     #header {
       width: 100%;
-      button {
-        position: relative;
-        display: block;
-        right: 30px;
+      #newGame {
+        width: 100px;
+        font-size: 15px;
+      }
+      #restartGame {
+        width: 100px;
+        font-size: 15px;
       }
     }
+
     position: relative;
     top: 10vh;
   }

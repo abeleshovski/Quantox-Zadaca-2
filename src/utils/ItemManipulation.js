@@ -9,7 +9,7 @@ export const itemsDoNotMatch = (resetStates) => {
   clearTimeout();
 };
 
-export const changeItem = (items, item, setItems, isStarted, score) => {
+export const changeItem = (items, item, setItems, isStarted, moves, time) => {
   let newGrid = [...items];
 
   newGrid.forEach((row) => {
@@ -37,7 +37,9 @@ export const changeItem = (items, item, setItems, isStarted, score) => {
   }
   setTimeout(() => {
     if (flag) {
-      alert(`You won! Your score is ${score}`);
+      alert(
+        `You won! Your finished in ${moves} moves and ${time.minutes} minutes and ${time.seconds} seconds!`
+      );
       isStarted(false);
     }
   }, 500);
