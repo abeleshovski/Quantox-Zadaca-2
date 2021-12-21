@@ -1,0 +1,38 @@
+{
+  "files": {
+    "main.css": "/Quantox-Zadaca-2/static/css/main.f6dde37a.chunk.css",
+    "main.js": "/Quantox-Zadaca-2/static/js/main.c404485b.chunk.js",
+    "main.js.map": "/Quantox-Zadaca-2/static/js/main.c404485b.chunk.js.map",
+    "runtime-main.js": "/Quantox-Zadaca-2/static/js/runtime-main.db6acca7.js",
+    "runtime-main.js.map": "/Quantox-Zadaca-2/static/js/runtime-main.db6acca7.js.map",
+    "static/js/2.9b895237.chunk.js": "/Quantox-Zadaca-2/static/js/2.9b895237.chunk.js",
+    "static/js/2.9b895237.chunk.js.map": "/Quantox-Zadaca-2/static/js/2.9b895237.chunk.js.map",
+    "index.html": "/Quantox-Zadaca-2/index.html",
+    "static/css/main.f6dde37a.chunk.css.map": "/Quantox-Zadaca-2/static/css/main.f6dde37a.chunk.css.map",
+    "static/js/2.9b895237.chunk.js.LICENSE.txt": "/Quantox-Zadaca-2/static/js/2.9b895237.chunk.js.LICENSE.txt",
+    "static/media/amazon.6fb4c203.svg": "/Quantox-Zadaca-2/static/media/amazon.6fb4c203.svg",
+    "static/media/apple.7207345b.svg": "/Quantox-Zadaca-2/static/media/apple.7207345b.svg",
+    "static/media/battle-net.ebb13e01.svg": "/Quantox-Zadaca-2/static/media/battle-net.ebb13e01.svg",
+    "static/media/bitcoin.d7f7d008.svg": "/Quantox-Zadaca-2/static/media/bitcoin.d7f7d008.svg",
+    "static/media/chrome.364d59d3.svg": "/Quantox-Zadaca-2/static/media/chrome.364d59d3.svg",
+    "static/media/cloudflare.5968f19e.svg": "/Quantox-Zadaca-2/static/media/cloudflare.5968f19e.svg",
+    "static/media/facebook.a0e9b803.svg": "/Quantox-Zadaca-2/static/media/facebook.a0e9b803.svg",
+    "static/media/firefox.67a02084.svg": "/Quantox-Zadaca-2/static/media/firefox.67a02084.svg",
+    "static/media/github.06c3933b.svg": "/Quantox-Zadaca-2/static/media/github.06c3933b.svg",
+    "static/media/google.7752ad83.svg": "/Quantox-Zadaca-2/static/media/google.7752ad83.svg",
+    "static/media/instagram.76a811cf.svg": "/Quantox-Zadaca-2/static/media/instagram.76a811cf.svg",
+    "static/media/jedi-order.d3bbd3e1.svg": "/Quantox-Zadaca-2/static/media/jedi-order.d3bbd3e1.svg",
+    "static/media/node.375ddf93.svg": "/Quantox-Zadaca-2/static/media/node.375ddf93.svg",
+    "static/media/skype.b6d88d3c.svg": "/Quantox-Zadaca-2/static/media/skype.b6d88d3c.svg",
+    "static/media/slack.14e7a13e.svg": "/Quantox-Zadaca-2/static/media/slack.14e7a13e.svg",
+    "static/media/spotify.8db9311b.svg": "/Quantox-Zadaca-2/static/media/spotify.8db9311b.svg",
+    "static/media/twitter.d4717686.svg": "/Quantox-Zadaca-2/static/media/twitter.d4717686.svg",
+    "static/media/youtube.47b3ae54.svg": "/Quantox-Zadaca-2/static/media/youtube.47b3ae54.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.db6acca7.js",
+    "static/js/2.9b895237.chunk.js",
+    "static/css/main.f6dde37a.chunk.css",
+    "static/js/main.c404485b.chunk.js"
+  ]
+}
