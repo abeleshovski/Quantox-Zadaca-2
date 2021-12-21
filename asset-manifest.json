@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/Quantox-Zadaca-2/static/css/main.f6dde37a.chunk.css",
-    "main.js": "/Quantox-Zadaca-2/static/js/main.c404485b.chunk.js",
-    "main.js.map": "/Quantox-Zadaca-2/static/js/main.c404485b.chunk.js.map",
+    "main.css": "/Quantox-Zadaca-2/static/css/main.520c9b83.chunk.css",
+    "main.js": "/Quantox-Zadaca-2/static/js/main.e6f3d145.chunk.js",
+    "main.js.map": "/Quantox-Zadaca-2/static/js/main.e6f3d145.chunk.js.map",
     "runtime-main.js": "/Quantox-Zadaca-2/static/js/runtime-main.db6acca7.js",
     "runtime-main.js.map": "/Quantox-Zadaca-2/static/js/runtime-main.db6acca7.js.map",
     "static/js/2.9b895237.chunk.js": "/Quantox-Zadaca-2/static/js/2.9b895237.chunk.js",
     "static/js/2.9b895237.chunk.js.map": "/Quantox-Zadaca-2/static/js/2.9b895237.chunk.js.map",
     "index.html": "/Quantox-Zadaca-2/index.html",
-    "static/css/main.f6dde37a.chunk.css.map": "/Quantox-Zadaca-2/static/css/main.f6dde37a.chunk.css.map",
+    "static/css/main.520c9b83.chunk.css.map": "/Quantox-Zadaca-2/static/css/main.520c9b83.chunk.css.map",
     "static/js/2.9b895237.chunk.js.LICENSE.txt": "/Quantox-Zadaca-2/static/js/2.9b895237.chunk.js.LICENSE.txt",
     "static/media/amazon.6fb4c203.svg": "/Quantox-Zadaca-2/static/media/amazon.6fb4c203.svg",
     "static/media/apple.7207345b.svg": "/Quantox-Zadaca-2/static/media/apple.7207345b.svg",
@@ -32,7 +32,7 @@
   "entrypoints": [
     "static/js/runtime-main.db6acca7.js",
     "static/js/2.9b895237.chunk.js",
-    "static/css/main.f6dde37a.chunk.css",
-    "static/js/main.c404485b.chunk.js"
+    "static/css/main.520c9b83.chunk.css",
+    "static/js/main.e6f3d145.chunk.js"
   ]
 }
